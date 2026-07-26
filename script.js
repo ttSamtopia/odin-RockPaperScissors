@@ -28,14 +28,16 @@ function playGame() {
     let humanScore = 0;
 
     for (let i = 0; i < 5; i++) {
-        console.log(playRound());
+        alert(playRound());
     }
 
     if (humanScore > computerScore) {
-        console.log(`You won the game! Final score: You ${humanScore} - Computer ${computerScore}`);
+        return(`You won the game! Final score: You ${humanScore} - Computer ${computerScore}`);
     } else if (humanScore < computerScore) {
-        console.log(`You lost the game! Final score: You ${humanScore} - Computer ${computerScore}`);
+        return(`You lost the game! Final score: You ${humanScore} - Computer ${computerScore}`);
     } else {
-        console.log(`The game is a tie! Final score: You ${humanScore} - Computer ${computerScore}`);
+        return(`The game is a tie! Final score: You ${humanScore} - Computer ${computerScore}`);
     }
 }
+
+alert(playGame());
